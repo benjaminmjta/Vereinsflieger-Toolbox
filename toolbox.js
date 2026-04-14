@@ -51,7 +51,8 @@ function getSelectedRowData() {
     const cells = selectedRow.querySelectorAll("td");
     if (cells.length < 10)
       return {
-        error: "Tabellenstruktur unerwartet. Sind alle Spalten sichtbar?",
+        error:
+          "Tabellenstruktur unerwartet. Sind alle Spalten sichtbar, bist du auf der richtigen Seite?",
       };
 
     return {
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       !tab.url ||
       !tab.url.includes("vereinsflieger.de/member/community/logbook.php")
     ) {
-      showError("Bitte auf der Vereinsflieger.de Logbuch-Seite nutzen.");
+      showError("Bitte auf der Vereinsflieger.de Boardbuch-Seite nutzen.");
       return;
     }
 

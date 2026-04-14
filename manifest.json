@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Vereinsflieger Toolbox",
   "version": "1.0",
-  "description": "Eine Toolbox für Vereinsflieger mit Zeiten- und Landungsrechner.",
+  "description": "Eine Toolbox für Vereinsflieger.de. Unterstützt momentan die Boardbuch-Buchhaltung mit einem Zeiten- und Landungsrechner.",
   "permissions": ["activeTab", "scripting"],
   "icons": {
     "48": "paper-plane-solid-full.svg",
