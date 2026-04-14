@@ -38,31 +38,52 @@ function showError(msg) {
   status.style.display = "block";
 }
 
-// Skript um die Daten zu holen
+// Datenextraktion
 function getSelectedRowData() {
   try {
+    // 1. Header finden und Indizes mappen
+    const headerCells = document.querySelectorAll("thead th");
+    if (!headerCells.length)
+      return { error: "Tabellen-Header nicht gefunden." };
+
+    let colMap = {
+      landungen: -1,
+      flugzeit: -1,
+      gesamtLandungen: -1,
+      gesamtBetriebszeit: -1,
+    };
+
+    headerCells.forEach((th, index) => {
+      const text = th.innerText.replace(/\s+/g, " ").trim();
+
+      if (text === "Landungen") colMap.landungen = index;
+      if (text === "Flugzeit in hh:mm") colMap.flugzeit = index;
+      if (text === "Gesamt Landungen") colMap.gesamtLandungen = index;
+      if (text === "Gesamt Betriebszeit") colMap.gesamtBetriebszeit = index;
+    });
+
+    // alle benötigten Spalten da?
+    if (Object.values(colMap).some((idx) => idx === -1)) {
+      return { error: "Spalten im Header nicht eindeutig erkannt." };
+    }
+
+    // 2. Markierte Zeile finden
     const selectedRow = document.querySelector("tr.selected");
     if (!selectedRow)
-      return {
-        error:
-          "Keine markierte Zeile gefunden. Bitte wähle eine Zeile in der Tabelle aus.",
-      };
+      return { error: "Keine Zeile ausgewählt. Bitte klicke eine Zeile an." };
 
     const cells = selectedRow.querySelectorAll("td");
-    if (cells.length < 10)
-      return {
-        error:
-          "Tabellenstruktur unerwartet. Sind alle Spalten sichtbar, bist du auf der richtigen Seite?",
-      };
 
     return {
-      currentLandings: parseInt(cells[6].innerText.trim(), 10) || 0,
-      currentFlightTime: cells[7].innerText.trim(),
-      totalLandings: parseInt(cells[8].innerText.trim(), 10) || 0,
-      totalFlightTime: cells[9].innerText.trim(),
+      currentLandings:
+        parseInt(cells[colMap.landungen].innerText.trim(), 10) || 0,
+      currentFlightTime: cells[colMap.flugzeit].innerText.trim(),
+      totalLandings:
+        parseInt(cells[colMap.gesamtLandungen].innerText.trim(), 10) || 0,
+      totalFlightTime: cells[colMap.gesamtBetriebszeit].innerText.trim(),
     };
   } catch (e) {
-    return { error: e.toString() };
+    return { error: "Fehler beim Lesen der Daten: " + e.toString() };
   }
 }
 
@@ -72,15 +93,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     const tab = tabs[0];
 
-    // Prüfen ob URL existiert vereinsflieger ist
     if (
       !tab ||
       !tab.url ||
-      !tab.url.includes(
-        "vereinsflieger.de/member/community/logbook.php?cumulate",
-      )
+      !tab.url.includes("vereinsflieger.de/member/community/logbook")
     ) {
-      showError("Bitte auf der Vereinsflieger.de Boardbuch - Seite nutzen.");
+      showError("Bitte auf der Vereinsflieger.de Boardbuch-Seite nutzen.");
       return;
     }
 
@@ -91,26 +109,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       },
       (injectionResults) => {
         if (chrome.runtime.lastError) {
-          showError(
-            "Fehler beim Zugriff auf die Seite: " +
-              chrome.runtime.lastError.message,
-          );
+          showError("Zugriffsfehler: " + chrome.runtime.lastError.message);
           return;
         }
 
         const data = injectionResults[0].result;
-
-        if (!data) {
-          showError("Konnte keine Daten von der Seite lesen.");
-          return;
-        }
-
+        if (!data) return;
         if (data.error) {
           showError(data.error);
           return;
         }
 
-        // ---- Zeiten eintragen ----
+        // Zeiten eintragen
         const currentMins = timeToMins(data.currentFlightTime);
         const totalMins = timeToMins(data.totalFlightTime);
         const baseMins = totalMins - currentMins;
@@ -119,11 +129,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("time-val2").value = data.currentFlightTime;
         updateTimeCalc();
 
-        // ---- Landungen eintragen ----
+        // Landungen eintragen
         const baseLandings = data.totalLandings - data.currentLandings;
         document.getElementById("land-val1").value = baseLandings;
         document.getElementById("land-val2").value = data.currentLandings;
         updateLandCalc();
+
+        // Status ausblenden wenn erfolgreich
+        document.getElementById("status").style.display = "none";
       },
     );
   } catch (error) {
