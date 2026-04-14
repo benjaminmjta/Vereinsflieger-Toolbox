@@ -2,6 +2,11 @@
   "manifest_version": 3,
   "name": "Vereinsflieger Toolbox",
   "version": "1.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "vereinsflieger-toolbox@benmajta.dev"
+    }
+  },
   "description": "Eine Toolbox für Vereinsflieger.de. Unterstützt momentan die Boardbuch-Buchhaltung mit einem Zeiten- und Landungsrechner.",
   "permissions": ["activeTab", "scripting"],
   "icons": {

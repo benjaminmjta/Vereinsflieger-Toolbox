@@ -76,9 +76,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (
       !tab ||
       !tab.url ||
-      !tab.url.includes("vereinsflieger.de/member/community/logbook.php")
+      !tab.url.includes(
+        "vereinsflieger.de/member/community/logbook.php?cumulate",
+      )
     ) {
-      showError("Bitte auf der Vereinsflieger.de Boardbuch-Seite nutzen.");
+      showError("Bitte auf der Vereinsflieger.de Boardbuch - Seite nutzen.");
       return;
     }
 
