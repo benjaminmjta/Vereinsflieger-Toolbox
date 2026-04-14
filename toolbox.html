@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="toolbox.css" />
+    </head>
+    <body>
+        <h2>Vereinsflieger Toolbox</h2>
+
+        <div id="status" class="status">Lade Daten...</div>
+
+        <div class="calculator">
+            <h3>Zeitenrechner (hh:mm)</h3>
+            <div class="input-group">
+                <label>Bisherige Gesamtzeit:</label>
+                <input type="text" id="time-val1" placeholder="0:00" />
+            </div>
+            <div class="input-group">
+                <label>+ Aktuelle Flugzeit:</label>
+                <input type="text" id="time-val2" placeholder="0:00" />
+            </div>
+            <div class="input-group result-group">
+                <label>= Neue Gesamtzeit:</label>
+                <input type="text" id="time-result" readonly />
+            </div>
+        </div>
+
+        <div class="calculator">
+            <h3>Landungsrechner</h3>
+            <div class="input-group">
+                <label>Bisherige Gesamtlandungen:</label>
+                <input type="number" id="land-val1" placeholder="0" />
+            </div>
+            <div class="input-group">
+                <label>+ Aktuelle Landungen:</label>
+                <input type="number" id="land-val2" placeholder="0" />
+            </div>
+            <div class="input-group result-group">
+                <label>= Neue Gesamtlandungen:</label>
+                <input type="number" id="land-result" readonly />
+            </div>
+        </div>
+
+        <script src="toolbox.js"></script>
+    </body>
+</html>

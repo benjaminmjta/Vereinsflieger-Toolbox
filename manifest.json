@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Vereinsflieger Toolbox",
+  "version": "1.0",
+  "description": "Eine Toolbox für Vereinsflieger mit Zeiten- und Landungsrechner.",
+  "permissions": ["activeTab", "scripting"],
+  "icons": {
+    "48": "paper-plane-solid-full.svg",
+    "128": "paper-plane-solid-full.svg"
+  },
+  "action": {
+    "default_icon": "paper-plane-solid-full.svg",
+    "default_popup": "toolbox.html",
+    "default_title": "Vereinsflieger Toolbox öffnen"
+  }
+}
