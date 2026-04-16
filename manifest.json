@@ -4,10 +4,13 @@
   "version": "1.0",
   "browser_specific_settings": {
     "gecko": {
-      "id": "vereinsflieger-toolbox@benmajta.dev"
+      "id": "vereinsflieger-toolbox@benmajta.dev",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
-  "description": "Eine Toolbox für Vereinsflieger.de. Unterstützt momentan die Boardbuch-Buchhaltung mit einem Zeiten- und Landungsrechner.",
+  "description": "Eine Toolbox für Vereinsflieger.de. Unterstützt momentan die Bordbuch-Buchhaltung mit einem Zeiten- und Landungsrechner.",
   "permissions": ["activeTab", "scripting"],
   "icons": {
     "48": "paper-plane-solid-full.svg",

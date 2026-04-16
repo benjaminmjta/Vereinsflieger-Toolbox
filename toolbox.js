@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       !tab.url ||
       !tab.url.includes("vereinsflieger.de/member/community/logbook")
     ) {
-      showError("Bitte auf der Vereinsflieger.de Boardbuch-Seite nutzen.");
+      showError("Bitte auf der Vereinsflieger.de Bordbuch-Seite nutzen.");
       return;
     }
 
