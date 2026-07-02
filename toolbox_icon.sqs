@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<square-sketch>
+    <figure>
+        <node id="#0" location="18 10.757"/>
+        <node id="#1" location="18 10.437"/>
+        <linear id="#2">
+            <start node="#0"/>
+            <end node="#1"/>
+        </linear>
+        <node id="#3" location="18 11.245" style="visible"/>
+        <node id="#4" location="16.502 11"/>
+        <node id="#5" location="15 16"/>
+        <node id="#6" location="24 16"/>
+        <linear id="#7">
+            <start node="#5"/>
+            <end node="#6"/>
+        </linear>
+        <node id="#8" location="22 11"/>
+        <node id="#9" location="19.49 11.172"/>
+        <linear id="#10">
+            <start node="#8"/>
+            <end node="#9"/>
+        </linear>
+        <node id="#11" location="18 10.375"/>
+        <node id="#12" location="17.25 10.375"/>
+        <linear id="#13">
+            <start node="#11"/>
+            <end node="#12"/>
+        </linear>
+        <node id="#14" location="18 11.496"/>
+        <node id="#15" location="18 11.625"/>
+        <linear id="#16">
+            <start node="#14"/>
+            <end node="#15"/>
+        </linear>
+        <node id="#17" location="16.94 9.94"/>
+        <circular id="#18" style="invisible">
+            <start node="#4" angle="0"/>
+            <end node="#17" angle="44.99"/>
+        </circular>
+        <node id="#19" location="16.001 11"/>
+        <linear id="#20">
+            <start node="#4"/>
+            <end node="#19"/>
+        </linear>
+        <node id="#21" location="16.586 9.586"/>
+        <circular id="#22">
+            <start node="#19" angle="0"/>
+            <end node="#21" angle="44.99"/>
+        </circular>
+        <linear id="#23">
+            <start node="#17"/>
+            <end node="#21"/>
+        </linear>
+        <plane id="#24" style="background">
+            <outline edges="#18 #20 #22 #23"/>
+        </plane>
+        <node id="#25" location="18.367 11.125"/>
+        <node id="#26" location="18.992 11.104"/>
+        <linear id="#27">
+            <start node="#25"/>
+            <end node="#26"/>
+        </linear>
+        <node id="#28" location="17.648 11.25"/>
+        <node id="#29" location="17.628 11.186"/>
+        <circular id="#30">
+            <start node="#28" angle="160.28"/>
+            <end node="#29" angle="170.6"/>
+        </circular>
+        <node id="#31" location="15 7"/>
+        <node id="#32" location="17.027 11.208"/>
+        <linear id="#33">
+            <start node="#32"/>
+            <end node="#28"/>
+        </linear>
+        <node id="#34" location="18 9.5"/>
+        <node id="#35" location="19.061 9.939"/>
+        <circular id="#36">
+            <start node="#34" angle="-90.12"/>
+            <end node="#35" angle="-45.1"/>
+        </circular>
+        <node id="#37" location="18.342 11"/>
+        <circular id="#38">
+            <start node="#37" angle="-19.93"/>
+            <end node="#25" angle="0.01"/>
+        </circular>
+        <node id="#39" location="24 7"/>
+        <node id="#40" location="19.491 11.086"/>
+        <linear id="#41">
+            <start node="#40"/>
+            <end node="#8"/>
+        </linear>
+        <circular id="#42">
+            <start node="#0" angle="-89.35"/>
+            <end node="#37" angle="-19.93"/>
+        </circular>
+        <node id="#43" location="18 11.997"/>
+        <node id="#44" location="18 12.5"/>
+        <linear id="#45">
+            <start node="#43"/>
+            <end node="#44"/>
+        </linear>
+        <node id="#46" location="16.939 12.061"/>
+        <circular id="#47">
+            <start node="#44" angle="90.06"/>
+            <end node="#46" angle="135.07"/>
+        </circular>
+        <circular id="#48">
+            <start node="#46" angle="135.07"/>
+            <end node="#4" angle="180"/>
+        </circular>
+        <circular id="#49">
+            <start node="#4" angle="180"/>
+            <end node="#17" angle="-135.05"/>
+        </circular>
+        <circular id="#50">
+            <start node="#17" angle="-135.05"/>
+            <end node="#34" angle="-90.11"/>
+        </circular>
+        <circular id="#51" style="invisible">
+            <start node="#34" angle="90"/>
+            <end node="#35" angle="135"/>
+        </circular>
+        <circular id="#52">
+            <start node="#35" angle="-45.08"/>
+            <end node="#40" angle="3.28"/>
+        </circular>
+        <linear id="#53">
+            <start node="#26"/>
+            <end node="#40"/>
+        </linear>
+        <node id="#54" location="17.018 11.104"/>
+        <circular id="#55">
+            <start node="#54" angle="173.92"/>
+            <end node="#26" angle="6.04"/>
+        </circular>
+        <node id="#56" location="17.023 11.155"/>
+        <circular id="#57">
+            <start node="#56" angle="170.98"/>
+            <end node="#54" angle="173.92"/>
+        </circular>
+        <circular id="#58">
+            <start node="#32" angle="167.95"/>
+            <end node="#56" angle="170.98"/>
+        </circular>
+        <circular id="#59">
+            <start node="#43" angle="90.25"/>
+            <end node="#32" angle="167.95"/>
+        </circular>
+        <plane id="#60" style="solid">
+            <outline edges="#45 #47 #48 #49 #50 #51 #52 #53 #55 #57 #58 #59"/>
+        </plane>
+        <node id="#61" location="18.344 11.25"/>
+        <circular id="#62">
+            <start node="#61" angle="19.93"/>
+            <end node="#14" angle="89.84"/>
+        </circular>
+        <node id="#63" location="18.981 11.206"/>
+        <linear id="#64">
+            <start node="#9"/>
+            <end node="#63"/>
+        </linear>
+        <node id="#65" location="18 9"/>
+        <linear id="#66">
+            <start node="#65"/>
+            <end node="#34"/>
+        </linear>
+        <node id="#67" location="19.414 9.586"/>
+        <circular id="#68">
+            <start node="#65" angle="90"/>
+            <end node="#67" angle="135"/>
+        </circular>
+        <linear id="#69">
+            <start node="#35"/>
+            <end node="#67"/>
+        </linear>
+        <node id="#70" location="18 13"/>
+        <node id="#71" location="16.586 12.414"/>
+        <circular id="#72">
+            <start node="#70" angle="-90"/>
+            <end node="#71" angle="-45"/>
+        </circular>
+        <linear id="#73">
+            <start node="#70"/>
+            <end node="#44"/>
+        </linear>
+        <circular id="#74" style="invisible">
+            <start node="#44" angle="-90"/>
+            <end node="#46" angle="-45"/>
+        </circular>
+        <linear id="#75">
+            <start node="#71"/>
+            <end node="#46"/>
+        </linear>
+        <plane id="#76" style="background">
+            <outline edges="#51 #66 #68 #69"/>
+            <outline edges="#72 #73 #74 #75"/>
+        </plane>
+        <node id="#77" location="18.75 10.375"/>
+        <linear id="#78">
+            <start node="#1"/>
+            <end node="#12"/>
+        </linear>
+        <circular id="#79">
+            <start node="#34" angle="-90.11"/>
+            <end node="#35" angle="-45.08"/>
+        </circular>
+        <circular id="#80">
+            <start node="#40" angle="3.28"/>
+            <end node="#9" angle="6.54"/>
+        </circular>
+        <linear id="#81">
+            <start node="#77"/>
+            <end node="#11"/>
+        </linear>
+        <circular id="#82">
+            <start node="#26" angle="6.04"/>
+            <end node="#63" angle="12.01"/>
+        </circular>
+        <node id="#83" location="18.37 11.148"/>
+        <circular id="#84">
+            <start node="#83" angle="60.26"/>
+            <end node="#3" angle="89.9"/>
+        </circular>
+        <node id="#85" location="17.628 11.146"/>
+        <circular id="#86">
+            <start node="#25" angle="0.01"/>
+            <end node="#83" angle="3.61"/>
+        </circular>
+        <node id="#87" location="17.625 11.125"/>
+        <circular id="#88">
+            <start node="#85" angle="176.73"/>
+            <end node="#87" angle="-180.03"/>
+        </circular>
+        <node id="#89" location="18.364 11.186"/>
+        <circular id="#90">
+            <start node="#89" angle="9.47"/>
+            <end node="#61" angle="19.93"/>
+        </circular>
+        <linear id="#91">
+            <start node="#1"/>
+            <end node="#77"/>
+        </linear>
+        <circular id="#92">
+            <start node="#3" angle="89.9"/>
+            <end node="#85" angle="119.73"/>
+        </circular>
+        <circular id="#93">
+            <start node="#29" angle="170.6"/>
+            <end node="#85" angle="176.73"/>
+        </circular>
+        <linear id="#94">
+            <start node="#8"/>
+            <end node="#89"/>
+        </linear>
+        <linear id="#95">
+            <start node="#6"/>
+            <end node="#39"/>
+        </linear>
+        <linear id="#96">
+            <start node="#56"/>
+            <end node="#29"/>
+        </linear>
+        <circular id="#97">
+            <start node="#83" angle="3.61"/>
+            <end node="#89" angle="9.47"/>
+        </circular>
+        <circular id="#98">
+            <start node="#14" angle="89.84"/>
+            <end node="#28" angle="160.28"/>
+        </circular>
+        <linear id="#99">
+            <start node="#31"/>
+            <end node="#5"/>
+        </linear>
+        <linear id="#100">
+            <start node="#1"/>
+            <end node="#11"/>
+        </linear>
+        <text id="#101" origin="18.5 13" alignment="1 0">Toolbox</text>
+        <text id="#102" origin="18.5 12" alignment="1 0">Vereinsflieger</text>
+        <circular id="#103">
+            <start node="#87" angle="-180.03"/>
+            <end node="#0" angle="-89.35"/>
+        </circular>
+        <linear id="#104">
+            <start node="#87"/>
+            <end node="#54"/>
+        </linear>
+        <linear id="#105">
+            <start node="#63"/>
+            <end node="#61"/>
+        </linear>
+        <linear id="#106">
+            <start node="#39"/>
+            <end node="#31"/>
+        </linear>
+    </figure>
+</square-sketch>
